@@ -12,8 +12,11 @@
 */
 Route::get('/',['uses'=>'Controller@homepage']);
 Route::get('/cadastro',['uses'=>'Controller@cadastrar']);
+/*
+    Rotas para login do usuario
+*/
 Route::get('/login',['uses'=>'Controller@fazerLogin']);
-
+Route::post('/login',['as'=>'user.login','uses'=>'Controller@fazerLogin']);
 /*
 Route::get('/', function () {  
     return view('welcome');

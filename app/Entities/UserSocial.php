@@ -5,14 +5,7 @@ namespace App\Entities;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Autenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
-
-
-/**
- * Class User.
- *
- * @package namespace App\Entities;
- */
-class User extends Autenticatable
+class UserSocial extends Model
 {
     use SoftDeletes;
     use Notifiable;    
@@ -27,7 +20,7 @@ class User extends Autenticatable
      */
     
     protected $fillable = [
-        'cpf', 'name', 'phone','birth','gerder','notes','email','password','status', 'permission'
+        'user_id', 'social_network', 'social_id','social_email','social_avatar'
     ];
 
     /**
@@ -35,8 +28,5 @@ class User extends Autenticatable
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];	
-
+    protected $hidden = [];
 }

@@ -18,7 +18,10 @@ class Controller extends BaseController
     public function cadastrar(){
         echo "cadastrando";
      }
+    /*
+        Metodo para fazer do usuario
+    */
      public function fazerLogin(){
-        echo"logando";
+        return view('user.login');     
      }
 }
